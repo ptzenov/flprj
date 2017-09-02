@@ -95,77 +95,41 @@ The rest of the commands are self-explanatory.
 Instructions which are supported:
 *************************************
 
-SET MOVE TYPE SELECTOR					You specify LINEAR, ARC, HELIX or SEQUENTIAL2
-
-MOVE 									Causes a move of the set type. Values are absolute.
-Sequential2 results in movement along X and Y then Z.
-This does not follow a coordinated interpolation between each axis.
-Occurs at velocity #2
-
-STEP RELATIVE X							Causes a linear movement to occur. Value is a relative input. 
-STEP RELATIVE Y							
-STEP RELATIVE Z
-
-START CONTINUOUS LINEAR MOVE X
-STOP CONTINUOUS LINEAR MOVE X
-START CONTINUOUS LINEAR MOVE Y
-STOP CONTINUOUS LINEAR MOVE Y
-START CONTINUOUS LINEAR MOVE Z
-STOP CONTINUOUS LINEAR MOVE Z
-
-SET ACCELERATION/DECELERATION #1
-SET ACCELERATION/DECELERATION #2
-
-SET ACCELERATION SELECTOR TO #1
-SET ACCELERATION SELECTOR TO #2
-
-SET ACCELERATION/DECELEATION RAMP ON		This dictates if accel/decel calcs will be performed or not.
-SET ACCELERATION/DECELERATION RAMP OFF		This only applies to LINEAR type movements.
-
-SET PLANE SELECT TO XY
-SET PLANE SELECT TO XZ
-SET PLANE SELECT TO YZ
-
-SET VELOCITY #1
-SET VELOCITY #2
-
-SET VELOCITY SCALE #1
-SET VELOCITY SCALE #2
-
-SET POSITION X
-SET POSITION Y
-SET POSITION Z
-
-SET AXIS POSITIVE RANGE X
-SET AXIS POSITIVE RANGE Y
-SET AXIS POSITIVE RANGE Z
-
-SET AXIS NEGATIVE RANGE X
-SET AXIS NEGATIVE RANGE Y
-SET AXIS NEGATIVE RANGE Z
-
-GET POSITION X
-GET POSITION Y
-GET POSITION Z
-
-GET DELTA ACCELERATION X
-GET DELTA ACCELERATION Y
-GET DELTA ACCELERATION Z
-
-GET DELTA VELOCITY X
-GET DELTA VELOCITY Y
-GET DELTA VELOCITY Z
-
-GET ACCELERATION SELECTOR					These selectors report the state 	programmed by the corresponding SET instructions. 
-GET PLANE SELECTOR
-GET RAMP SELECTOR
-
-GET VELOCITY SCALE #1
-GET VELOCITY SCALE #2
-
-
-
-
+Currently supported commands are:
+ 0: set_move_type
+ 1: move
+ 2: pause
+ 3: resume
+ 4: set_linear_move_direction
+ 5: start_continuous_linear_move_x
+ 6: stop_continuous_linear_move_x
+ 7: start_continuous_linear_move_y
+ 8: stop_continuous_linear_move_y
+ 9: start_continuous_linear_move_z
+ 10: stop_continuous_linear_move_z
+ 11: set_position_x
+ 12: set_position_y
+ 13: set_position_z
+ 14: set_velocity_1
+ 15: set_velocity_2
+ 16: set_velocity_selector_to_1
+ 17: set_velocity_selector_to_2
+ 18: set_acceleration_1
+ 19: set_acceleration_2
+ 20: set_acceleration_selector_to_1
+ 21: set_acceleration_selector_to_2
+ 22: set_rotation_axis
+ 23: set_center_of_rotation
+ 24: set_angular_velocity
+ 25: set_angular_acceleration
+ 26: set_axial_velocity
+ 27: go_to
+ 28: set_axis_max
+ 29: set_axis_min
+ 30: set_rotation_plane
+ 31: set_arch_angle
+ 32: end (to exit the program)
+PLease note that in order to start the simulation, you need to enter the command [MOVE]
 
 
 
