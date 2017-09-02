@@ -11,27 +11,22 @@ Summary:
 ********
 
 This program models the state and location of an hypothetical object in a 3D space.
-The object can be instruction to move, either in a line, arc or a helix.
+The object can be instructed to move, either in a line, arc or a helix.
 
 ********
 Details:
 ********
 
 This program continuously calculates the position, state of motion, movement and trajectory.
-Calculations will be based on trapezoidal trajectory profiles.
 
-The program operated by passing it instructions and queries.
-These are simple strings which are designed to require minimal parsing.
+The program operated by passing it instructions and queries. These are simple strings which are designed to require minimal parsing.
 
-The calculation is run continuously, but iteratively.
-Each iteration is based on time, referred to as the "time base".
-Between each iteration, the program can respond to instructions.
-For example, changing to a new velocity or requesting a specific state variable.
+The calculation is run continuously, but iteratively. Each iteration is based on time, referred to as the "time base".
+Between each iteration, the program can respond to instructions. For example, changing to a new velocity or requesting a specific state variable.
 
 As new values are programmed the behaviour of the objects motion must change.
 
-Parameters will be given to this "solver" which define needed details such as 
-maximum velocity, acceleration, deceleration and position.
+Parameters will be given to this "solver" which define needed details such as  maximum velocity, acceleration, deceleration and position.
 
 
 The instructions and query format is basic.
